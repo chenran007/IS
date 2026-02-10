@@ -33,21 +33,26 @@ feature_names = ["QDC", "QSC", "Age", "Gender", "WHtR", "Saltytaste", "Depressio
 
 # In[11]:
 
+BOOL = {"Yes":1, "No":0}
+AGE = {"60-69":0, "70-79":1, "≥80":2}
+GENDER={"Male":1, "Female":0}
+WAIST={"Abnormal":1, "Normal":0}
+
 
 #Streamlit 用户界面
 st.title("IS Risk Prediction")
-QDC = st.selectbox("Qi-deficiency constitution (QDC):", options=[0, 1])
-QSC = st.selectbox("qi stagnation constitution (QSC):", options=[0, 1])
-Age = st.selectbox("Age:", options=[0, 1,2])
-Gender = st.selectbox("Gender:", options=[0, 1])
-WHtR = st.selectbox("WHtR:", options=[0, 1,2])
-Saltytaste = st.selectbox("Saltytaste:", options=[0, 1])
-Depression = st.selectbox("Depression:", options=[0, 1])
-Socialparticipation = st.selectbox("Socialparticipation:", options=[0, 1])
-Hyperlipidemia = st.selectbox("Hyperlipidemia:", options=[0, 1])
-Hypertension = st.selectbox("Hypertension:", options=[0, 1])
-CHD = st.selectbox("Coronary heart disease (CHD):", options=[0, 1])
-Diabetes = st.selectbox("Diabetes:", options=[0, 1])
+QDC = BOOL[st.selectbox("Qi-deficiency constitution (QDC):", options=BOOL)]
+QSC = BOOL[st.selectbox("qi stagnation constitution (QSC):", options=BOOL)]
+Age = AGE[st.selectbox("Age:", options=AGE)]
+Gender = GENDER[st.selectbox("Gender:", options=GENDER]
+WHtR = WAIST[st.selectbox("WHtR:", options=WAIST)]
+Saltytaste = BOOL[st.selectbox("Saltytaste:", options=BOOL)]
+Depression = BOOL[st.selectbox("Depression:", options=BOOL)]
+Socialparticipation = BOOL[st.selectbox("Socialparticipation:", options=BOOL)]
+Hyperlipidemia = BOOL[st.selectbox("Hyperlipidemia:", options=BOOL)]
+Hypertension = BOOL[st.selectbox("Hypertension:", options=BOOL)]
+CHD = BOOL[st.selectbox("Coronary heart disease (CHD):", options=BOOL)]
+Diabetes = BOOL[st.selectbox("Diabetes:", options=BOOL)]
 
 
 # In[13]:
