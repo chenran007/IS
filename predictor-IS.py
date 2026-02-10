@@ -44,7 +44,7 @@ st.title("IS Risk Prediction")
 QDC = BOOL[st.selectbox("Qi-deficiency constitution (QDC):", options=BOOL)]
 QSC = BOOL[st.selectbox("qi stagnation constitution (QSC):", options=BOOL)]
 Age = AGE[st.selectbox("Age:", options=AGE)]
-Gender = GENDER[st.selectbox("Gender:", options=GENDER]
+Gender = GENDER[st.selectbox("Gender:", options=GENDER)]
 WHtR = WAIST[st.selectbox("WHtR:", options=WAIST)]
 Saltytaste = BOOL[st.selectbox("Saltytaste:", options=BOOL)]
 Depression = BOOL[st.selectbox("Depression:", options=BOOL)]
